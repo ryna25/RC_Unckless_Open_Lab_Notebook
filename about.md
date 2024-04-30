@@ -11,8 +11,11 @@ I am a PhD student in the Unckless lab at the University of Kansas. This Open La
 ### More Information
 
 [Unckless Lab Website](https://www.uncklesslab.com/)  
-[My Lab Notebook](https://anjaligupta1210.github.io/AG_Unckless_Open_Lab_Notebook/)
+
+
 [Google Scholar Profile](https://scholar.google.com/citations?user=q9vCrekAAAAJ&hl=en)
+
+
 [ORCID](https://orcid.org/0000-0002-5717-543X)
 
 ### Contact me
@@ -98,17 +101,17 @@ Computational
 ### Presentations and Publications
 
 #### Posters
-**Gupta, A.**, Svensson, E.I., Frietsch, H. and Tsuboi, M. Natural and sexual selection on the morphology Ischnura elegans and Enallagma cyathigerum. IISER, Mohali, April 2022. Poster presentation.
-**Gupta, A.**, Prasad, N.G. Evolution of metabolic pathways in response to selection for larval crowding in populations of Drosophila melanogaster. Indian Society of Evolutionary Biologists (ISEB) conference. Jawaharlal Nehru Institute for Advanced Scientific Research (JNCASR), Bangalore. October 2019. Poster presentation.
+- **Gupta, A.**, Svensson, E.I., Frietsch, H. and Tsuboi, M. Natural and sexual selection on the morphology Ischnura elegans and Enallagma cyathigerum. IISER, Mohali, April 2022. Poster presentation.
+- **Gupta, A.**, Prasad, N.G. Evolution of metabolic pathways in response to selection for larval crowding in populations of Drosophila melanogaster. Indian Society of Evolutionary Biologists (ISEB) conference. Jawaharlal Nehru Institute for Advanced Scientific Research (JNCASR), Bangalore. October 2019. Poster presentation.
 
 
 #### Talks
-**Gupta, A.**, Unckless, R.L. Can autosomal suppressors of meiotic drive prevent cycling of sex chromosomes? Evolution 2023 conference, Society for the Study of Evolution (SSE). Albuquerque, NM. June 2023. Oral presentation. 
+- **Gupta, A.**, Unckless, R.L. Can autosomal suppressors of meiotic drive prevent cycling of sex chromosomes? Evolution 2023 conference, Society for the Study of Evolution (SSE). Albuquerque, NM. June 2023. Oral presentation. 
 
 
 #### Publications
-**Gupta, A.**, & Unckless, R. (2023). Autosomal suppression of meiotic drive can prevent sex chromosome cycling. bioRxiv, 2023-09.
-Smith, B. R., Patch, K. B., **Gupta, A.**, Knoles, E. M., & Unckless, R. L. (2023). The genetic basis of variation in immune defense against Lysinibacillus fusiformis infection in Drosophila melanogaster. PLoS pathogens, 19(8), e1010934
-Mullinax, S. R., Darby, A. M., **Gupta, A.**, Chan, P., Smith, B. R., & Unckless, R. L. (2023). A suite of selective pressures supports the maintenance of alleles of a Drosophila immune peptide. eLife, 12.
-**Gupta, A.**, Svensson, E. I., Frietsch, H., & Tsuboi, M. (2022). Stasis in the adaptive landscape of two ecologically similar and sympatric damselfly species. bioRxiv, 2022-10.
-**Gupta, A.**, 2022. Natural and sexual selection on morphology and chemical cues in insects. Masters dissertation, IISER Mohali.
+- **Gupta, A.**, & Unckless, R. (2023). Autosomal suppression of meiotic drive can prevent sex chromosome cycling. bioRxiv, 2023-09.
+- Smith, B. R., Patch, K. B., **Gupta, A.**, Knoles, E. M., & Unckless, R. L. (2023). The genetic basis of variation in immune defense against Lysinibacillus fusiformis infection in Drosophila melanogaster. PLoS pathogens, 19(8), e1010934
+- Mullinax, S. R., Darby, A. M., **Gupta, A.**, Chan, P., Smith, B. R., & Unckless, R. L. (2023). A suite of selective pressures supports the maintenance of alleles of a Drosophila immune peptide. eLife, 12.
+- **Gupta, A.**, Svensson, E. I., Frietsch, H., & Tsuboi, M. (2022). Stasis in the adaptive landscape of two ecologically similar and sympatric damselfly species. bioRxiv, 2022-10.
+- **Gupta, A.**, 2022. Natural and sexual selection on morphology and chemical cues in insects. Masters dissertation, IISER Mohali.
