@@ -1,3 +1,10 @@
+---
+layout: post
+title: Generate genotype likelihoods after alignments  
+category: [ Computational Pipelines ]
+tags: [ Angsd SNP calling, Population genomics ]
+---
+
 I want to call SNPs from my alignments following mapping the reads from 90 male samples to the D. affinis female masked genome.
 
 I am using angsd to call SNPs from these alignments.

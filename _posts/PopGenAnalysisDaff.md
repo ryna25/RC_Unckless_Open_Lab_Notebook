@@ -1,3 +1,10 @@
+---
+layout: post
+title: Align genomes for D. affinis SR1, SR2, ST  
+category: [ Computational Pipelines ]
+tags: [ Angsd SNP calling, Population genomics ]
+---
+
 This is Anjali's Notebook.
 
 I am doing Population genomics analysis of D. affinis ST, SR1, SR2

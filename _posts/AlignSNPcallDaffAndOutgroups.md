@@ -1,3 +1,10 @@
+---
+layout: post
+title: Alignments of D. affinis and outgroup genome for SNP calling  
+category: [ Computational Pipelines ]
+tags: [ Sliding window trees, Comparative genomics ]
+---
+
 The aim of this pipeline is to call SNPs from *Drosophila affinis* SR1, SR2, ST and closely related species - *Drosophila algonquin, D. athabasca, D. azteca, and D. pseudoobscura*.
 
 Rob gave me *D. affinis* SR1, SR2 and ST reads, and a reference masked genome. I am using short reads for other species from NCBI.
