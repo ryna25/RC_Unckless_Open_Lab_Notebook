@@ -1,9 +1,3 @@
----
-layout: post
-title: Hello
-category: [ Intro ]
-tags: [ Hi ]
----
 
 Hi! I am Anjali.
 
