@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Alignments of D. affinis and outgroup genome for SNP calling  
+title: Alignments of D. affinis and outgroup genome for SNP calling
+date: 29 April 2024  
 category: [ Computational Pipelines ]
 tags: [ Sliding window trees, Comparative genomics ]
 ---

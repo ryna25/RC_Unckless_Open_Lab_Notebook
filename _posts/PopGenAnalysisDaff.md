@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Align genomes for D. affinis SR1, SR2, ST  
+title: Align genomes for D. affinis SR1, SR2, ST
+date: 13 April 2024    
 category: [ Computational Pipelines ]
 tags: [ Angsd SNP calling, Population genomics ]
 ---

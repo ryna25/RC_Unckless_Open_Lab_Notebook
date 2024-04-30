@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Generate genotype likelihoods after alignments  
+title: Generate genotype likelihoods after alignments 
+date: 16 April 2024   
 category: [ Computational Pipelines ]
 tags: [ Angsd SNP calling, Population genomics ]
 ---
