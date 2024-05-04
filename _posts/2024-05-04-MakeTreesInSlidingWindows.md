@@ -191,12 +191,12 @@ Once I have all of the output trees, I use the cat command to paste them all int
 
 
 ```python
-cat partitioned_X.phylips/DNA_p*.phylip.iqtree > OutputTrees_X.iqtree
+cat partitioned_X.phylips/DNA_p*.phylip.treefile > OutputTrees_X.trees
 ```
 
 
 ```python
-cat partitioned_Autosome.phylips/DNA_p*.phylip.iqtree > OutputTrees_Autosome.iqtree
+cat partitioned_Autosome.phylips/DNA_p*.phylip.treefile > OutputTrees_Autosome.trees
 ```
 
 Now we can calculate the proportion of trees supporting various topologies and visualize them using R 
