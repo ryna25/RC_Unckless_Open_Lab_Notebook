@@ -202,3 +202,177 @@ cat partitioned_Autosome.phylips/DNA_p*.phylip.treefile > OutputTrees_Autosome.t
 Now we can calculate the proportion of trees supporting various topologies and visualize them using R 
 
 The R script for visualization can be found here - https://github.com/anjaligupta1210/AG_Unckless_Open_Lab_Notebook/blob/master/rscripts/SlidingTrees.R 
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Trees in 100 kb window size**
+
+For filtered_allsites_ChrX_haploid.min4.phy -
+
+Length of the phylip alignment is 3,069,347
+
+So I will generate 30 100Kb alignments and ignore the last 69.347Kb
+
+To do so, I will define two variables in a for loop.
+
+One (i) will track 1-30, over the 30 iterations
+one (j) will track 1-3,000,001 in increments of 100Kb, over the 30 iterations
+
+The code '$((j+99999))' means add 99,999 to j each iteration, which will track 100,000-3,000,000 in increments of 100Kb, over the 30 iterations
+
+Run this code to generate the necessary partition file
+
+
+```python
+j=1
+for i in {1..30}
+do
+echo "DNA, p${i}=${j}-$((j+99999))" >> partitions_X_100kb.txt
+j=$((j+100000))
+done
+```
+
+For filtered_allsites_Autosomes_diploid.min4.phy -
+
+Length of the phylip alignment is 6,033,053
+
+So I will generate 60 100Kb alignments and ignore the last 33.053Kb
+
+To do so, I will define two variables in a for loop.
+
+One (i) will track 1-60, over the 60 iterations
+one (j) will track 1-6,000,001 in increments of 100Kb, over the 60 iterations
+
+The code '$((j+99999))' means add 99,999 to j each iteration, which will track 100,000-6,000,000 in increments of 100Kb, over the 60 iterations
+
+Run this code to generate the necessary partition file
+
+
+```python
+j=1
+for i in {1..60}
+do
+echo "DNA, p${i}=${j}-$((j+99999))" >> partitions_Autosome_100kb.txt
+j=$((j+100000))
+done
+```
+
+We will download the necessary python script to unconcatenate the phylip based on the above partition file
+
+
+```python
+curl -LO https://gist.githubusercontent.com/jonchang/34c2e8e473ec2e8f50574671e62c3365/raw/unconcatenate_phylip.py
+```
+
+We will run the python script on this file to cut it up and read each subset file out into a new directory
+
+
+```python
+mkdir partitioned_X_100kb.phylips
+module load python
+python unconcatenate_phylip.py filtered_allsites_ChrX_haploid.min4.phy partitions_X_100kb.txt --prefix=partitioned_X_100kb.phylips/
+```
+
+
+```python
+mkdir partitioned_Autosome_100kb.phylips
+module load python
+python unconcatenate_phylip.py filtered_allsites_Autosomes_diploid.min4.phy partitions_Autosome_100kb.txt --prefix=partitioned_Autosome_100kb.phylips/
+```
+
+The next step is just making a tree for each phylip alignment.
+
+We are going to do this by submitting a 'batch job' on the cluster that spawns a unique job for each phylip alignment.
+
+Here is my script for Script_RunGeneTreeArray_X_100kb.sh
+
+
+```python
+#!/bin/sh
+#
+#SBATCH --job-name=auto.gene.trees.X               
+#SBATCH --nodes=1             
+#SBATCH --ntasks-per-node=15               
+#SBATCH --partition=sixhour            
+#SBATCH --chdir=/work/unckless/a948g501/SlidingTrees/partitioned_X_100kb.phylips    
+#SBATCH --mem-per-cpu=2gb            
+#SBATCH --array=1-30
+#SBATCH --time=360
+
+
+#To be able to later use bootstrapping in ASTRAL, we will also generate sets of trees from bootstrapped gene alignments in the same IQ-TREE analysis, by using the option -B 
+#we do not specify a substition model with the -m option and therefore allow IQ-TREE to automatically select the best-fitting model.
+#we will now ensure that the bootstrap trees are actually written to a file, and not just summarized in the output, by specifying the option --wbt.
+#-nt AUTO ensures that all available CPU's are used
+
+##load module iqtree
+module load iqtree
+iqtree2 -s /work/unckless/a948g501/SlidingTrees/partitioned_X_100kb.phylips/DNA_p$SLURM_ARRAY_TASK_ID.phylip -bb 1000 -wbt -nt AUTO
+```
+
+Make the Script executable -
+
+
+```python
+chmod +x Script_RunGeneTreeArray_X_100kb.sh
+```
+
+Here is my script for Script_RunGeneTreeArray_Autosome_100kb.sh
+
+
+```python
+#!/bin/sh
+#
+#SBATCH --job-name=auto.gene.trees.Autosome              
+#SBATCH --nodes=1            
+#SBATCH --ntasks-per-node=15              
+#SBATCH --partition=sixhour            
+#SBATCH --chdir=/work/unckless/a948g501/SlidingTrees/partitioned_Autosome_100kb.phylips    
+#SBATCH --mem-per-cpu=2gb           
+#SBATCH --array=1-60
+#SBATCH --time=360
+
+
+#To be able to later use bootstrapping in ASTRAL, we will also generate sets of trees from bootstrapped gene alignments in the same IQ-TREE analysis, by using the option -B 
+#we do not specify a substition model with the -m option and therefore allow IQ-TREE to automatically select the best-fitting model.
+#we will now ensure that the bootstrap trees are actually written to a file, and not just summarized in the output, by specifying the option --wbt.
+#-nt AUTO ensures that all available CPU's are used
+
+##load module iqtree
+module load iqtree
+iqtree2 -s /work/unckless/a948g501/SlidingTrees/partitioned_Autosome_100kb.phylips/DNA_p$SLURM_ARRAY_TASK_ID.phylip -bb 1000 -wbt -nt AUTO
+```
+
+Make the Script executable -
+
+
+```python
+chmod +x Script_RunGeneTreeArray_Autosome_100kb.sh
+```
+
+This will create a lot of output files but the only thing I really need to worry about is the output tree file. 
+Once I have all of the output trees, I use the cat command to paste them all into a single file. 
+
+
+```python
+cat partitioned_X_100kb.phylips/DNA_p*.phylip.treefile > OutputTrees_X_100kb.trees
+```
+
+
+```python
+cat partitioned_Autosome_100kb.phylips/DNA_p*.phylip.treefile > OutputTrees_Autosome_100kb.trees
+```
+
+Now we can calculate the proportion of trees supporting various topologies and visualize them using R 
+
+The R script used for visualization can be found here - https://github.com/anjaligupta1210/AG_Unckless_Open_Lab_Notebook/blob/master/rscripts/SlidingTrees_100kb.R
