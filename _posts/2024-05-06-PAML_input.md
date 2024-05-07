@@ -474,7 +474,7 @@ cat *"_${j}_consensus".fasta > "${j}_multi".fasta
 
 #get the alignment
 module load muscle
-muscle -in "${j}_multi".fasta -out "alignment_${j}".phy
+muscle -in "${j}_multi".fasta -out "alignment_${j}".phy -maxiters 1 -diags1
 
 #make trees
 module load iqtree
