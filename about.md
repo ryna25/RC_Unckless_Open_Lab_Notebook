@@ -58,7 +58,8 @@ I am a PhD student in the Unckless lab at the University of Kansas. This Open La
 
 |Time|Student| Affiliation|
 |--|--|--|
-|Spring 2023, Fall 2023, Spring 2024 | Vincent Chan, Undergraduate student | University of Kansas, Lawrence, US|
+|Spring 2024 | Rylee Crowell, Undergraduate student | University of Kansas, Lawrence, US|
+|Spring 2024, Fall 2023, Spring 2023 | Vincent Chan, Undergraduate student | University of Kansas, Lawrence, US|
 |Spring 2024 | Ibrahim Farooqi , Undergraduate student | University of Kansas, Lawrence, US|
 |Fall 2022 | Lane Anaya, Undergraduate student | University of Kansas, Lawrence, US|
 
