@@ -35,7 +35,7 @@ Current undergraduate student in the Unckless lab at the University of Kansas. T
 
 |Date|School| Degree|
 |--|--|--|
-|2021-Present |	BS Biochemistry | University of Kansas, Lawrence, KS|
+|2021-2025 |	BS Biochemistry | University of Kansas, Lawrence, KS|
 
 
 ### Leadership Experience
